@@ -1,0 +1,24 @@
+﻿<Window x:Class="MaloprodajniObjekat.Prozori.PotvrdaKupovine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaloprodajniObjekat.Prozori"
+        mc:Ignorable="d"
+        Title="Potvrdi kupovinu?" Height="400" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF008BB1" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="korpatxtfield" Text="" Background="White" BorderBrush="Black" FontSize="11" Margin="28,33,28,130" IsReadOnly="True" IsUndoEnabled="False"/>
+        <Label FontFamily="Bahnschrift" Content="Da li ste sigurni da želite" Foreground="White" FontSize="16" Margin="28,254,28,74"/>
+        <Label FontFamily="Bahnschrift" Content="da potvrdite kupovinu?" Foreground="White" FontSize="16" Margin="28,272,28,47"/>
+        <Button x:Name="yesBtn" Content="POTVRDI" HorizontalAlignment="Left" Height="32" Margin="28,326,0,0" VerticalAlignment="Top" Width="106" FontFamily="Bahnschrift" FontSize="16" Click="yesBtn_Click"/>
+        <Button x:Name="noBtn" Content="OTKAŽI" HorizontalAlignment="Left" Height="32" Margin="166,326,0,0" VerticalAlignment="Top" Width="106" FontFamily="Bahnschrift" FontSize="16" Click="noBtn_Click"/>
+        <Label FontFamily="Bahnschrift" Content="Ukupna cena:" Foreground="White" FontSize="16" Margin="28,300,28,26"/>
+        <Label x:Name="ukupnaCenaLbl" FontFamily="Bahnschrift" Content="pricePlaceholder" Foreground="White" FontSize="16" Margin="134,300,-78,26"/>
+    </Grid>
+</Window>

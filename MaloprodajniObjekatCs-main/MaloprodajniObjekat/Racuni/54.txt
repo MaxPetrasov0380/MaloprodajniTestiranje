@@ -1,0 +1,15 @@
+ID RAČUNA: 54
+KASIR: maxpetrasov
+DATUM I VREME: 13. 11. 2024 14:10:57
+------
+Pilos Mleko 2,4%mm 1l x 10 = 1100 RSD
+------
+Pilos Vocni Jogurt Sour Cherry 400g x 2 = 300 RSD
+------
+Smoki Flips 150g x 1 = 200 RSD
+------
+Smoki Flips 150g x 1 = -200 RSD
+STORNO
+
+---------
+UKUPNA CENA: 1400RSD

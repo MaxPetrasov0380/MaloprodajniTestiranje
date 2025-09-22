@@ -1,0 +1,8 @@
+ID RAČUNA: 24
+KASIR: ziskra
+DATUM I VREME: 12. 6. 2024 11:25:54
+------
+Jelen Svetlo Pivo 0,5l x 3 = 210 RSD
+
+---------
+UKUPNA CENA: 210RSD

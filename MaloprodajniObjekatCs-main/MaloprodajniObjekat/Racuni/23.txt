@@ -1,0 +1,12 @@
+ID RAČUNA: 23
+KASIR: maxpetrasov
+DATUM I VREME: 12. 6. 2024 11:23:12
+------
+Jelen Svetlo Pivo 0,5l x 2 = 140 RSD
+------
+Kokice Slane 4x100g x 1 = 250 RSD
+------
+Smoki Flips 150g x 1 = 200 RSD
+
+---------
+UKUPNA CENA: 590RSD

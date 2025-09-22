@@ -1,0 +1,15 @@
+ID RAČUNA: 51
+KASIR: maxpetrasov
+DATUM I VREME: 14. 6. 2024 14:30:57
+------
+Smoki Flips 150g x 1 = 200 RSD
+------
+Milka Noisette 80g x 1 = 130 RSD
+------
+Beli Rezani Hleb 500g x 10 = 760 RSD
+------
+Beli Rezani Hleb 500g x 10 = -760 RSD
+STORNO
+
+---------
+UKUPNA CENA: 330RSD

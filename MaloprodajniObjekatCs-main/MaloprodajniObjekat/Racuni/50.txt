@@ -1,0 +1,10 @@
+ID RAČUNA: 50
+KASIR: maxpetrasov
+DATUM I VREME: 14. 6. 2024 14:29:29
+------
+Beli Rezani Hleb 500g x 30 = 2280 RSD
+------
+Jelen Svetlo Pivo 0,5l x 12 = 840 RSD
+
+---------
+UKUPNA CENA: 3120RSD

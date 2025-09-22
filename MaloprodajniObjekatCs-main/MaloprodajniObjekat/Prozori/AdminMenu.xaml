@@ -1,0 +1,32 @@
+﻿<Window x:Class="MaloprodajniObjekat.Prozori.AdminMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaloprodajniObjekat.Prozori"
+        mc:Ignorable="d"
+        Title="ADMIN MENI" 
+        ResizeMode="NoResize" 
+        Width="1200" 
+        Height="600" 
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF008BB1" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Content="INVENTAR" HorizontalAlignment="Left" Margin="23,62,0,0" VerticalAlignment="Top" Height="37" Width="124" FontFamily="Bahnschrift" Click="adminInventarWindow"/>
+        <Button Content="KASIRI" HorizontalAlignment="Left" Margin="23,104,0,0" VerticalAlignment="Top" Height="37" Width="124" FontFamily="Bahnschrift" Click="adminKasiriWindow"/>
+        <Button Content="ADMINI" HorizontalAlignment="Left" Margin="23,146,0,0" VerticalAlignment="Top" Height="37" Width="124" FontFamily="Bahnschrift" Click="adminAdminiWindow"/>
+        <Button Content="ŠEFOVI NABAVKE" HorizontalAlignment="Left" Margin="23,188,0,0" VerticalAlignment="Top" Height="37" Width="124" FontFamily="Bahnschrift" Click="adminSefoviWindow"/>
+        <Button Content="IZLOGUJ SE" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="returnToLogin" FontFamily="Bahnschrift"/>
+        <Frame x:Name="adminFrame" Content="" Margin="175,19,10,10" NavigationUIVisibility="Hidden"/>
+        <Label x:Name="loggedIn" Content="loggedInPlaceholder" Margin="10,262,1030,262" Foreground="White" FontFamily="Bahnschrift" FontSize="16"/>
+        <Label Content="Ulogovani ste kao:" HorizontalAlignment="Left" Height="30" Margin="10,232,0,0" VerticalAlignment="Top" Width="165" Foreground="White" FontFamily="Bahnschrift" FontSize="18"/>
+        <Image Source="/Resursi/adminmenilogo.png" Margin="254,0,89,528"/>
+    </Grid>
+</Window>

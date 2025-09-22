@@ -1,0 +1,27 @@
+﻿<Window x:Class="MaloprodajniObjekat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaloprodajniObjekat"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="308" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF008BB1" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image x:Name="marketLogo" VerticalAlignment="Top" Source="/Resursi/marketlogo.png" Height="84" Margin="24,10,24,0"/>
+        <TextBox x:Name="usernameBox" Width="180" Margin="64,138,64,246" />
+        <PasswordBox x:Name="passwordBox" Width="180" Margin="64,200,64,184" />
+        <Label x:Name="usernameLbl" Width="180" Margin="64,110,64,266" Content="Korisničko ime:" FontFamily="Bahnschrift" Foreground="White"/>
+        <Label x:Name="passLbl" Width="180" Margin="64,173,64,208" Content="Šifra:" FontFamily="Bahnschrift" Foreground="White"/>
+        <Button Height="30" Width="180" Content="Uloguj se kao ADMIN" Click="adminLoginWindow" Margin="52,316,52,68" FontFamily="Bahnschrift"/>
+        <Button Height="30" Width="180" Content="Uloguj se kao KASIR" Click="kasirLoginWindow" Margin="52,345,52,39" FontFamily="Bahnschrift"/>
+        <Button Height="30" Width="180" Content="Uloguj se kao ŠEF NABAVKE" Click="sefNabavkeLoginWindow" Margin="52,374,52,10" FontFamily="Bahnschrift"/>
+
+
+    </Grid>
+</Window>

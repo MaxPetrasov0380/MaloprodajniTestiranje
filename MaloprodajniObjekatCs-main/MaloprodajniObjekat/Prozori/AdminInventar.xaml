@@ -1,0 +1,33 @@
+﻿<Page x:Class="MaloprodajniObjekat.Prozori.AdminInventar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaloprodajniObjekat.Prozori"
+        mc:Ignorable="d"
+        Title="Prikaz Artikala" Height="500" Width="984">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF008BB1" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Content="D O D A J" HorizontalAlignment="Left" Margin="7,389,0,0" VerticalAlignment="Top" Width="130" Height="40" FontFamily="Bahnschrift" FontSize="18" Click="dodajArtikalBtn"/>
+        <Button Content="I Z M E N I" HorizontalAlignment="Left" Margin="142,389,0,0" VerticalAlignment="Top" Width="130" Height="40" FontFamily="Bahnschrift" FontSize="18" Click="izmeniArtikalBtn"/>
+        <Button Content="O B R I Š I" HorizontalAlignment="Left" Margin="7,434,0,0" VerticalAlignment="Top" Height="40" Width="130" FontFamily="Bahnschrift" FontSize="18" Click="obrisiArtikalBtn"/>
+        <Button Content="OČISTI POLJA" HorizontalAlignment="Left" Margin="142,434,0,0" VerticalAlignment="Top" Width="130" Height="40" FontFamily="Bahnschrift" FontSize="18" Click="ocistiPoljaBtn"/>
+        <DataGrid x:Name="artDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="290,13,26,10" SelectionChanged="artDataGrid_SelectionChanged"/>
+        <Label x:Name="artNazivLbl" Content="Naziv artikla" HorizontalAlignment="Left" Height="26" Margin="22,72,0,0" VerticalAlignment="Top" Width="164" FontFamily="Bahnschrift" Foreground="White"/>
+        <Label x:Name="artVrstaLbl" Content="Vrsta artikla" HorizontalAlignment="Left" Height="26" Margin="22,124,0,0" VerticalAlignment="Top" Width="164" FontFamily="Bahnschrift" Foreground="White"/>
+        <Label x:Name="artCenaLbl" Content="Cena" HorizontalAlignment="Left" Height="26" Margin="22,176,0,0" VerticalAlignment="Top" Width="164" FontFamily="Bahnschrift" Foreground="White"/>
+        <Label x:Name="artKolicinaLbl" Content="Količina" HorizontalAlignment="Left" Height="26" Margin="142,176,0,0" VerticalAlignment="Top" Width="164" FontFamily="Bahnschrift" Foreground="White"/>
+        <TextBox x:Name="artVrstaTxt" HorizontalAlignment="Left" Height="24" Margin="149,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115"/>
+        <ComboBox x:Name="artVrstaDropdown" HorizontalAlignment="Left" Height="24" Margin="22,150,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.511,0.307" Loaded="load"/>
+        <TextBox x:Name="artNazivTxt" HorizontalAlignment="Left" Height="24" Margin="22,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="242"/>
+        <TextBox x:Name="artCenaTxt" HorizontalAlignment="Left" Height="24" Margin="22,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115" PreviewTextInput="artCenaTxt_PreviewTextInput"/>
+        <TextBox x:Name="artKolicinaTxt" HorizontalAlignment="Left" Height="24" Margin="142,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="122" PreviewTextInput="artKolicinaTxt_PreviewTextInput"/>
+        <Image x:Name="artikliLogo" HorizontalAlignment="Left" Height="85" Margin="21,0,0,0" VerticalAlignment="Top" Width="298" Source="/Resursi/artiklilogo.png"/>
+        <TextBox x:Name="artIDTxt" HorizontalAlignment="Left" Height="22" Margin="22,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Visibility="Hidden"/>
+    </Grid>
+</Page>

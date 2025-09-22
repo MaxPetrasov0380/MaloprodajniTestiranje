@@ -1,0 +1,31 @@
+﻿<Window x:Class="MaloprodajniObjekat.Prozori.KasirMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaloprodajniObjekat.Prozori"
+        mc:Ignorable="d"
+        Title="KASIR MENI" 
+        ResizeMode="NoResize" 
+        Width="1200" 
+        Height="600" 
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF008BB1" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="kasirKupovinaBtn" Content="KUPOVINA" HorizontalAlignment="Left" Margin="23,61,0,0" VerticalAlignment="Top" Height="37" Width="124" FontFamily="Bahnschrift" Click="kasirKupovinaWindow"/>
+        <Button x:Name="kasirRacuniBtn" Content="RAČUNI" HorizontalAlignment="Left" Margin="23,103,0,0" VerticalAlignment="Top" Height="37" Width="124" FontFamily="Bahnschrift" Click="kasirRacuniWindow"/>
+        <Button x:Name="returnToLoginBtn" Content="IZLOGUJ SE" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="returnToLogin" FontFamily="Bahnschrift"/>
+        <Frame x:Name="kasirFrame" Content="Frame" Height="500" Margin="175,41,41,43" RenderTransformOrigin="0.5,0.5" NavigationUIVisibility="Hidden"/>
+        <Label x:Name="loggedIn" Content="loggedInPlaceholder" Margin="10,185,1030,340" Foreground="White" FontFamily="Bahnschrift" FontSize="16"/>
+        <Label Content="Ulogovani ste kao:" HorizontalAlignment="Left" Height="30" Margin="10,155,0,0" VerticalAlignment="Top" Width="165" Foreground="White" FontFamily="Bahnschrift" FontSize="18"/>
+        <Image Source="/Resursi/kasirmenilogo.png" Margin="205,0,71,504"/>
+    </Grid>
+</Window>
