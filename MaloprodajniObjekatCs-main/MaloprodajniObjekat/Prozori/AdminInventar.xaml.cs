@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MaloprodajniObjekat.Servisi;
 
 namespace MaloprodajniObjekat.Prozori
 {
@@ -23,25 +24,19 @@ namespace MaloprodajniObjekat.Prozori
     /// </summary>
     public partial class AdminInventar : Page
     {
+        private ArtikliServis _servis;
         public AdminInventar()
         {
             InitializeComponent();
+            string connStr = ConfigurationManager.ConnectionStrings["connSupermarket"].ConnectionString;
+            var repo = new ArtikliRepository(connStr);
+            _servis = new ArtikliServis(repo);
             prikaziInventar();
         }
 
         private void prikaziInventar()
         {
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString =
-            ConfigurationManager.ConnectionStrings["connSupermarket"].ConnectionString;
-            connection.Open();
-            SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT artikalID as [ID Artikla], artikalNaziv as [Naziv artikla], artikalVrsta as [Vrsta artikla], artikalCena as [Cena], artikalKolicina as [Dostupna količina] FROM [Artikal] ";
-            command.Connection = connection;
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable("Artikal");
-            dataAdapter.Fill(dataTable);
-            artDataGrid.ItemsSource = dataTable.DefaultView;
+            artDataGrid.ItemsSource = _servis.getDataTable().DefaultView;
         }
 
         private void ocistiPoljaBtn(object sender, RoutedEventArgs e)
@@ -60,49 +55,13 @@ namespace MaloprodajniObjekat.Prozori
 
         private void dodajArtikalBtn(object sender, RoutedEventArgs e)
         {
-            if (artNazivTxt.Text == "" || (artVrstaDropdown.Text == "" && artVrstaTxt.Text == "") || artCenaTxt.Text == "" || artKolicinaTxt.Text == "")
-            {
-                MessageBox.Show("Prvo popunite sva polja.");
-                return;
-            }
-            else
-            {
-                if (int.Parse(artKolicinaTxt.Text) < 0)
-                {
-                    MessageBox.Show("Količina ne sme biti manja od 0.");
-                    return;
-                }
-                else
-                {
-                    SqlConnection connection = new SqlConnection();
-                    connection.ConnectionString =
-                    ConfigurationManager.ConnectionStrings["connSupermarket"].ConnectionString;
-                    connection.Open();
-                    SqlCommand command = new SqlCommand();
-                    command.CommandText = "INSERT INTO Artikal VALUES(@naziv, @vrsta, @cena, @kolicina)";
-                    command.Parameters.AddWithValue("@naziv", artNazivTxt.Text);
-                    if (artVrstaTxt.Text == "")
-                    {
-                        command.Parameters.AddWithValue("@vrsta", artVrstaDropdown.Text);
-                    }
-                    else
-                    {
-                        command.Parameters.AddWithValue("@vrsta", artVrstaTxt.Text);
-                    }
-                    command.Parameters.AddWithValue("@cena", artCenaTxt.Text);
-                    command.Parameters.AddWithValue("@kolicina", artKolicinaTxt.Text);
 
-                    command.Connection = connection;
-                    int provera = command.ExecuteNonQuery();
-                    if (provera == 1)
-                    {
-                        MessageBox.Show("Dodavanje uspešno.");
-                        prikaziInventar();
-                    }
-                    ocistiPolja();
-                    loadDropdown();
-                }
-                
+            var success = _servis.create(artNazivTxt.Text, artVrstaTxt.Text, Convert.ToInt32(artCenaTxt.Text), Convert.ToInt32(artKolicinaTxt.Text));
+            if (success)
+            {
+                MessageBox.Show("Uspešno dodato!");
+                prikaziInventar();
+                ocistiPolja();
             }
         }
 

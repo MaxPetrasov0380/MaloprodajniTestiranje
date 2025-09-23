@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnitTestovi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+867cd0a6b7bbb097508bff8bb5270d7520284eec")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnitTestovi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnitTestovi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

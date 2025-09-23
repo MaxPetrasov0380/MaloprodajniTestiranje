@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Korisnik\source\repos\MaloprodajniObjekatCs-main\MaloprodajniObjekat\obj\Debug\
+D:\Svaštara\FAKS\gitrep\MaloprodajniTestiranje\MaloprodajniObjekatCs-main\MaloprodajniObjekat\obj\Debug\
 MaloprodajniObjekat
 none
 false
 DEBUG;TRACE
-C:\Users\Korisnik\source\repos\MaloprodajniObjekatCs-main\MaloprodajniObjekat\App.xaml
+D:\Svaštara\FAKS\gitrep\MaloprodajniTestiranje\MaloprodajniObjekatCs-main\MaloprodajniObjekat\App.xaml
 1319127568
 2-1010834038
-19995219913
-14-207034072
+21-1699549045
+18-1793735927
 Prozori\AdminAdmini.xaml;Prozori\AdminInventar.xaml;Prozori\AdminKasiri.xaml;Prozori\AdminMenu.xaml;Prozori\AdminSefovi.xaml;Prozori\KasirKupovina.xaml;Prozori\KasirMenu.xaml;Prozori\KasirRacuni.xaml;Prozori\MainWindow.xaml;Prozori\PotvrdaKupovine.xaml;Prozori\SefInventar.xaml;Prozori\SefNabavkeMenu.xaml;Prozori\SefPregledNabavki.xaml;
 
-True
+False
 
