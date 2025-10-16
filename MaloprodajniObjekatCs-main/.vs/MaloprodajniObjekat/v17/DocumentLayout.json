@@ -1,18 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Sva\u0161tara\\FAKS\\gitrep\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\",
+  "WorkspaceRootPath": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}|KasaE2E\\KasaE2E.csproj|d:\\sva\u0161tara\\faks\\gitrep\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\kasae2e\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}|KasaE2E\\KasaE2E.csproj|solutionrelative:kasae2e\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79535541-5A88-40CB-829A-E0E70391E2D4}|InventarIntegrationTesting\\InventarIntegrationTesting.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\inventarintegrationtesting\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79535541-5A88-40CB-829A-E0E70391E2D4}|InventarIntegrationTesting\\InventarIntegrationTesting.csproj|solutionrelative:inventarintegrationtesting\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|d:\\sva\u0161tara\\faks\\gitrep\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\maloprodajniobjekat\\prozori\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B10A55F-8E20-4DC9-A72A-BB7CCBB335E9}|UnitTestovi\\UnitTesting.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\unittestovi\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B10A55F-8E20-4DC9-A72A-BB7CCBB335E9}|UnitTestovi\\UnitTesting.csproj|solutionrelative:unittestovi\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\maloprodajniobjekat\\servisi\\iartiklirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|solutionrelative:maloprodajniobjekat\\servisi\\iartiklirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\maloprodajniobjekat\\servisi\\artikliservis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|solutionrelative:maloprodajniobjekat\\servisi\\artikliservis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\maloprodajniobjekat\\servisi\\artiklirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|solutionrelative:maloprodajniobjekat\\servisi\\artiklirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\maloprodajniobjekat\\prozori\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|solutionrelative:maloprodajniobjekat\\prozori\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}|KasaE2E\\KasaE2E.csproj|d:\\sva\u0161tara\\faks\\gitrep\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\kasae2e\\kasae2e.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}|KasaE2E\\KasaE2E.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\kasae2e\\kasae2e.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}|KasaE2E\\KasaE2E.csproj|solutionrelative:kasae2e\\kasae2e.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}|KasaE2E\\KasaE2E.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\kasae2e\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}|KasaE2E\\KasaE2E.csproj|solutionrelative:kasae2e\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79535541-5A88-40CB-829A-E0E70391E2D4}|InventarIntegrationTesting\\InventarIntegrationTesting.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\inventarintegrationtesting\\inventarintegrationtesting.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{79535541-5A88-40CB-829A-E0E70391E2D4}|InventarIntegrationTesting\\InventarIntegrationTesting.csproj|solutionrelative:inventarintegrationtesting\\inventarintegrationtesting.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}|KasaE2E\\KasaE2E.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\kasae2e\\kasae2e.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}|KasaE2E\\KasaE2E.csproj|solutionrelative:kasae2e\\kasae2e.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|c:\\users\\korisnik\\documents\\github\\maloprodajnitestiranje\\maloprodajniobjekatcs-main\\maloprodajniobjekat\\prozori\\admininventar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4000582E-6CDD-4AC4-BC73-F8D45753F0AC}|MaloprodajniObjekat\\MaloprodajniObjekat.csproj|solutionrelative:maloprodajniobjekat\\prozori\\admininventar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +54,147 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\UnitTestovi\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "UnitTestovi\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\UnitTestovi\\UnitTest1.cs",
+              "RelativeToolTip": "UnitTestovi\\UnitTest1.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:49:05.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "KasaE2E",
-              "DocumentMoniker": "D:\\Sva\u0161tara\\FAKS\\gitrep\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\KasaE2E.csproj",
-              "RelativeDocumentMoniker": "KasaE2E\\KasaE2E.csproj",
-              "ToolTip": "D:\\Sva\u0161tara\\FAKS\\gitrep\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\KasaE2E.csproj",
-              "RelativeToolTip": "KasaE2E\\KasaE2E.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
+              "Title": "IArtikliRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Servisi\\IArtikliRepository.cs",
+              "RelativeDocumentMoniker": "MaloprodajniObjekat\\Servisi\\IArtikliRepository.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Servisi\\IArtikliRepository.cs",
+              "RelativeToolTip": "MaloprodajniObjekat\\Servisi\\IArtikliRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:49:02.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ArtikliServis.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Servisi\\ArtikliServis.cs",
+              "RelativeDocumentMoniker": "MaloprodajniObjekat\\Servisi\\ArtikliServis.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Servisi\\ArtikliServis.cs",
+              "RelativeToolTip": "MaloprodajniObjekat\\Servisi\\ArtikliServis.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:49:01.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ArtikliRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Servisi\\ArtikliRepository.cs",
+              "RelativeDocumentMoniker": "MaloprodajniObjekat\\Servisi\\ArtikliRepository.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Servisi\\ArtikliRepository.cs",
+              "RelativeToolTip": "MaloprodajniObjekat\\Servisi\\ArtikliRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:49:00.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InventarIntegrationTesting",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\InventarIntegrationTesting\\InventarIntegrationTesting.csproj",
+              "RelativeDocumentMoniker": "InventarIntegrationTesting\\InventarIntegrationTesting.csproj",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\InventarIntegrationTesting\\InventarIntegrationTesting.csproj",
+              "RelativeToolTip": "InventarIntegrationTesting\\InventarIntegrationTesting.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-23T09:51:01.5Z",
+              "WhenOpened": "2025-10-16T14:42:19.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "KasaE2E\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\UnitTest1.cs",
+              "RelativeToolTip": "KasaE2E\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:39:14.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KasaE2E",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\KasaE2E.csproj",
+              "RelativeDocumentMoniker": "KasaE2E\\KasaE2E.csproj",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\KasaE2E.csproj",
+              "RelativeToolTip": "KasaE2E\\KasaE2E.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-16T13:34:35.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
-              "DocumentMoniker": "D:\\Sva\u0161tara\\FAKS\\gitrep\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "KasaE2E\\UnitTest1.cs",
-              "ToolTip": "D:\\Sva\u0161tara\\FAKS\\gitrep\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\UnitTest1.cs",
-              "RelativeToolTip": "KasaE2E\\UnitTest1.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAUAAAASAAAA",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\InventarIntegrationTesting\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "InventarIntegrationTesting\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\InventarIntegrationTesting\\UnitTest1.cs",
+              "RelativeToolTip": "InventarIntegrationTesting\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T10:15:59.125Z",
+              "WhenOpened": "2025-10-16T13:12:22.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
+              "Title": "KasaE2E.csproj",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\KasaE2E.csproj",
+              "RelativeDocumentMoniker": "KasaE2E\\KasaE2E.csproj",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\KasaE2E\\KasaE2E.csproj",
+              "RelativeToolTip": "KasaE2E\\KasaE2E.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-23T09:51:01.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Sva\u0161tara\\FAKS\\gitrep\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Prozori\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Prozori\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MaloprodajniObjekat\\Prozori\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\Sva\u0161tara\\FAKS\\gitrep\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Prozori\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Prozori\\MainWindow.xaml.cs",
               "RelativeToolTip": "MaloprodajniObjekat\\Prozori\\MainWindow.xaml.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAgwBgAAAAyAAAA",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwBwAAADVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-23T09:53:22.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminInventar.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Prozori\\AdminInventar.xaml.cs",
+              "RelativeDocumentMoniker": "MaloprodajniObjekat\\Prozori\\AdminInventar.xaml.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Prozori\\AdminInventar.xaml.cs",
+              "RelativeToolTip": "MaloprodajniObjekat\\Prozori\\AdminInventar.xaml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAA9wDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:25:53.632Z",
               "EditorCaption": ""
             }
           ]

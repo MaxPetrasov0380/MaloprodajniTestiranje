@@ -26,7 +26,7 @@ namespace MaloprodajniObjekat
         public MainWindow()
         {
             InitializeComponent();
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\MaloprodajniObjekat\\MaloprodajniObjekat\\Database\\MaloprodajniObjekat.mdf;Integrated Security=True";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Database\\MaloprodajniObjekat.mdf;Integrated Security=True";
             authService = new AuthenticationService(connectionString);
         }
 

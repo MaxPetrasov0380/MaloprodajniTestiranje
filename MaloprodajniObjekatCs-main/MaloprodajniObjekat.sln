@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "UnitTestovi\UnitTesting.csproj", "{6B10A55F-8E20-4DC9-A72A-BB7CCBB335E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventarIntegrationTesting", "InventarIntegrationTesting\InventarIntegrationTesting.csproj", "{79535541-5A88-40CB-829A-E0E70391E2D4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4000582E-6CDD-4AC4-BC73-F8D45753F0AC} = {4000582E-6CDD-4AC4-BC73-F8D45753F0AC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KasaE2E", "KasaE2E\KasaE2E.csproj", "{ACEFA914-2E14-4CFA-A7B4-480E5ACF7168}"
 EndProject
