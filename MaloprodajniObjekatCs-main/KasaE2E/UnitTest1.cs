@@ -1,16 +1,18 @@
-using FlaUI.Core;
+﻿using FlaUI.Core;
 using FlaUI.Core.AutomationElements;
 using FlaUI.Core.Definitions;
 using FlaUI.UIA3;
 using System;
 using System.Linq;
 using System.Threading;
+using System.Data.SqlClient;
 using Xunit;
 
 namespace E2ETest;
 public class KasaE2E : IDisposable
 {
     private readonly string appPath = @"C:\Users\Korisnik\Documents\GitHub\MaloprodajniTestiranje\MaloprodajniObjekatCs-main\MaloprodajniObjekat\bin\Debug\MaloprodajniObjekat.exe";
+    private readonly string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Korisnik\Documents\GitHub\MaloprodajniTestiranje\MaloprodajniObjekatCs-main\MaloprodajniObjekat\Database\MaloprodajniObjekat.mdf;Integrated Security=True";
     private Application app;
 
     private UIA3Automation automation;
@@ -60,7 +62,7 @@ public class KasaE2E : IDisposable
         Assert.NotNull(kolicinaBox);
         Assert.NotNull(artikliPrikaz);
 
-        var foundRow = FindRowByCellValue(artikliPrikaz, "artikalID", "3");
+        var foundRow = FindRowByCellValue(artikliPrikaz, "artikalID", "4");
         if (foundRow != null)
         {
             if (foundRow is FlaUI.Core.AutomationElements.DataGridViewRow dataRow)
@@ -80,7 +82,7 @@ public class KasaE2E : IDisposable
         Assert.NotNull(dodajUKorpuBtn);
         dodajUKorpuBtn.Invoke();
 
-        var zavrsiKupovinuBtn = WaitForElement(() => uiRoot.FindFirstDescendant(cf => cf.ByText("ZAVR�I KUPOVINU"))?.AsButton(), 2000);
+        var zavrsiKupovinuBtn = WaitForElement(() => uiRoot.FindFirstDescendant(cf => cf.ByText("ZAVRŠI KUPOVINU"))?.AsButton(), 2000);
         Assert.NotNull(zavrsiKupovinuBtn);
         zavrsiKupovinuBtn.Invoke();
 
@@ -92,6 +94,40 @@ public class KasaE2E : IDisposable
         yesBtn.Invoke();
         CloseAnyMessageBox(app, automation, timeoutMs: 2000);
         Thread.Sleep(800);
+
+        var racuniBtn = WaitForElement(() => KasirMeni.FindFirstDescendant(cf => cf.ByText("RAČUNI"))?.AsButton(), 3000);
+        Assert.NotNull(racuniBtn);
+        racuniBtn.Invoke();
+
+        var RacuniWindow = RetryFindTopLevelWindow(app, automation, titleContains: "Racuni", timeoutMs: 4000);
+        var uiRootRacuni = RacuniWindow ?? KasirMeni;
+
+        var racDataGrid = WaitForElement(() => uiRootRacuni.FindFirstDescendant(cf => cf.ByAutomationId("racDataGrid"))?.AsDataGridView(), 5000);
+        var prikaziRacunBtn = WaitForElement(() => uiRootRacuni.FindFirstDescendant(cf => cf.ByAutomationId("prikazRacunaBtn"))?.AsButton(), 3000);
+        var racunTextBox = WaitForElement(() => uiRootRacuni.FindFirstDescendant(cf => cf.ByAutomationId("racunPrikaz"))?.AsTextBox(), 3000);
+        var racunIDTxt = WaitForElement(() => uiRootRacuni.FindFirstDescendant(cf => cf.ByAutomationId("racunIDTxt"))?.AsTextBox(), 3000);
+
+        Assert.NotNull(racDataGrid);
+        Assert.NotNull(prikaziRacunBtn);
+        Assert.NotNull(racunTextBox);
+        Assert.NotNull(racunIDTxt);
+
+        int foundID;
+        string lastRacunID;
+
+        using (var connection = new SqlConnection(connString))
+        {
+            connection.Open();
+            using (var command = new SqlCommand("SELECT TOP 1 racunID FROM Racun ORDER BY racunID DESC", connection))
+            {
+                foundID = (int)command.ExecuteScalar();
+            }
+        }
+
+        lastRacunID = foundID.ToString();
+        racunIDTxt.Enter(lastRacunID);
+        prikaziRacunBtn.Invoke();
+        Thread.Sleep(4000);
     }
 
     private static Window RetryFindTopLevelWindow(Application app, UIA3Automation automation, string titleContains, int timeoutMs)

@@ -200,11 +200,11 @@ namespace MaloprodajniObjekat.Prozori
             DataRowView dr = dg.SelectedItem as DataRowView;
             if (dr != null)
             {
-                artIDTxt.Text = dr["ID Artikla"].ToString();
-                artNazivTxt.Text = dr["Naziv artikla"].ToString();
-                artVrstaTxt.Text = dr["Vrsta artikla"].ToString();
-                artCenaTxt.Text = dr["Cena"].ToString();
-                artKolicinaTxt.Text = dr["Dostupna količina"].ToString();
+                artIDTxt.Text = dr["artikalID"].ToString();
+                artNazivTxt.Text = dr["artikalNaziv"].ToString();
+                artVrstaTxt.Text = dr["artikalVrsta"].ToString();
+                artCenaTxt.Text = dr["artikalCena"].ToString();
+                artKolicinaTxt.Text = dr["artikalKolicina"].ToString();
             }
         }
 

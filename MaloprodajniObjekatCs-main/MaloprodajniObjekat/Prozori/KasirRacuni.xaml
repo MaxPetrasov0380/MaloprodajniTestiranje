@@ -13,7 +13,7 @@
                 <GradientStop Color="#FF008BB1" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Content="PRIKAŽI RAČUN" HorizontalAlignment="Left" Margin="19,180,0,0" VerticalAlignment="Top" Width="341" Height="40" FontFamily="Bahnschrift" FontSize="18" Click="prikaziRacunBtn"/>
+        <Button x:Name="prikazRacunaBtn" Content="PRIKAŽI RAČUN" HorizontalAlignment="Left" Margin="19,180,0,0" VerticalAlignment="Top" Width="341" Height="40" FontFamily="Bahnschrift" FontSize="18" Click="prikaziRacunBtn"/>
         <DataGrid x:Name="racDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="380,13,26,10" SelectionChanged="racDataGrid_SelectionChanged"/>
         <Label x:Name="racunIDLbl" Content="ID računa" HorizontalAlignment="Left" Height="26" Margin="19,110,0,0" VerticalAlignment="Top" Width="164" FontFamily="Bahnschrift" Foreground="White"/>
         <TextBox x:Name="racunIDTxt" HorizontalAlignment="Left" Height="24" Margin="19,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="filtrirajPretragu"/>
