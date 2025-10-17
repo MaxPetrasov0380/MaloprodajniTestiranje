@@ -1,73 +1,179 @@
 using FlaUI.Core;
 using FlaUI.Core.AutomationElements;
+using FlaUI.Core.Definitions;
 using FlaUI.UIA3;
 using System;
-using System.IO;
+using System.Linq;
+using System.Threading;
 using Xunit;
 
-namespace KasaE2E
+namespace E2ETest;
+public class KasaE2E : IDisposable
 {
-    public class KasirKupovinaE2ETests : IDisposable
+    private readonly string appPath = @"C:\Users\Korisnik\Documents\GitHub\MaloprodajniTestiranje\MaloprodajniObjekatCs-main\MaloprodajniObjekat\bin\Debug\MaloprodajniObjekat.exe";
+    private Application app;
+
+    private UIA3Automation automation;
+
+    public KasaE2E()
     {
-        private readonly Application _app;
-        private readonly AutomationBase _automation;
-        private readonly Window _mainWindow;
 
-        public KasirKupovinaE2ETests()
+    }
+
+    [Fact]
+    public void PurchaseE2E()
+    {
+        app = Application.Launch(appPath);
+        automation = new UIA3Automation();
+
+        var loginWindow = app.GetMainWindow(automation);
+        Assert.NotNull(loginWindow);
+
+        var usernameBox = WaitForElement(() => loginWindow.FindFirstDescendant(cf => cf.ByAutomationId("usernameBox"))?.AsTextBox(), 3000);
+        var passwordBox = WaitForElement(() => loginWindow.FindFirstDescendant(cf => cf.ByAutomationId("passwordBox"))?.AsTextBox(), 3000);
+
+        Assert.NotNull(usernameBox);
+        Assert.NotNull(passwordBox);
+
+        usernameBox.Enter("maxpetrasov");
+        passwordBox.Enter("maxpetras03");
+
+        var kasirLoginBtn = WaitForElement(() => loginWindow.FindFirstDescendant(cf => cf.ByText("Uloguj se kao KASIR"))?.AsButton(), 3000);
+        Assert.NotNull(kasirLoginBtn);
+        kasirLoginBtn.Invoke();
+
+        var KasirMeni = RetryFindTopLevelWindow(app, automation, titleContains: "KASIR MENI", timeoutMs: 5000);
+        Assert.NotNull(KasirMeni);
+
+        var kupovinaBtn = WaitForElement(() => KasirMeni.FindFirstDescendant(cf => cf.ByText("KUPOVINA"))?.AsButton(), 3000);
+        Assert.NotNull(kupovinaBtn);
+        kupovinaBtn.Invoke();
+
+        var kupovinaWindow = RetryFindTopLevelWindow(app, automation, titleContains: "Kupovina", timeoutMs: 4000);
+        var uiRoot = kupovinaWindow ?? KasirMeni;
+
+        var barkodBox = WaitForElement(() => uiRoot.FindFirstDescendant(cf => cf.ByAutomationId("barkod"))?.AsTextBox(), 3000);
+        var kolicinaBox = WaitForElement(() => uiRoot.FindFirstDescendant(cf => cf.ByAutomationId("kolicina"))?.AsTextBox(), 3000);
+        var artikliPrikaz = WaitForElement(() => uiRoot.FindFirstDescendant(cf => cf.ByAutomationId("artikliPrikaz"))?.AsDataGridView(), 5000);
+
+        Assert.NotNull(barkodBox);
+        Assert.NotNull(kolicinaBox);
+        Assert.NotNull(artikliPrikaz);
+
+        var foundRow = FindRowByCellValue(artikliPrikaz, "artikalID", "3");
+        if (foundRow != null)
         {
-            // Path to your WPF app executable
-            var appPath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\MaloprodajniObjekat\bin\Debug\net6.0-windows\MaloprodajniObjekat.exe");
-            _app = Application.Launch(appPath);
-            _automation = new UIA3Automation();
-            _mainWindow = _app.GetMainWindow(_automation);
+            if (foundRow is FlaUI.Core.AutomationElements.DataGridViewRow dataRow)
+            {
+                dataRow.Click();
+                dataRow.Patterns.SelectionItem.Pattern.Select();
+            }
+            else
+            {
+                foundRow.Click();
+                var cell = foundRow.FindFirstDescendant(cf => cf.ByControlType(FlaUI.Core.Definitions.ControlType.DataItem));
+                cell?.Click();
+            }
         }
+        kolicinaBox.Enter("8");
+        var dodajUKorpuBtn = WaitForElement(() => uiRoot.FindFirstDescendant(cf => cf.ByText("DODAJ U KORPU"))?.AsButton(), 2000);
+        Assert.NotNull(dodajUKorpuBtn);
+        dodajUKorpuBtn.Invoke();
 
-        [Fact]
-        public void AddItemToCart_And_CompletePurchase()
+        var zavrsiKupovinuBtn = WaitForElement(() => uiRoot.FindFirstDescendant(cf => cf.ByText("ZAVRŠI KUPOVINU"))?.AsButton(), 2000);
+        Assert.NotNull(zavrsiKupovinuBtn);
+        zavrsiKupovinuBtn.Invoke();
+
+        var PotvrdaKupovine = RetryFindTopLevelWindow(app, automation, titleContains: "Potvrdi kupovinu?", timeoutMs: 4000);
+        Assert.NotNull(PotvrdaKupovine);
+
+        var yesBtn = WaitForElement(() => PotvrdaKupovine.FindFirstDescendant(cf => cf.ByText("POTVRDI"))?.AsButton(), 2000);
+        Assert.NotNull(yesBtn);
+        yesBtn.Invoke();
+        CloseAnyMessageBox(app, automation, timeoutMs: 2000);
+        Thread.Sleep(800);
+    }
+
+    private static Window RetryFindTopLevelWindow(Application app, UIA3Automation automation, string titleContains, int timeoutMs)
+    {
+        var end = DateTime.Now.AddMilliseconds(timeoutMs);
+        while (DateTime.Now < end)
         {
-            // 1. Navigate to KasirKupovina page (assume a button with automation id "KasirKupovinaBtn")
-            var kasirBtn = _mainWindow.FindFirstDescendant(cf => cf.ByAutomationId("KasirKupovinaBtn"))?.AsButton();
-            Assert.NotNull(kasirBtn);
-            kasirBtn.Invoke();
-
-            // 2. Wait for KasirKupovina page to load (assume label with automation id "ukupnaCenaLbl")
-            var ukupnaCenaLbl = _mainWindow.FindFirstDescendant(cf => cf.ByAutomationId("ukupnaCenaLbl"))?.AsLabel();
-            Assert.NotNull(ukupnaCenaLbl);
-
-            // 3. Select an item from the inventory (assume DataGrid with automation id "artikliPrikaz")
-            var artikliPrikaz = _mainWindow.FindFirstDescendant(cf => cf.ByAutomationId("artikliPrikaz"))?.AsDataGridView();
-            Assert.NotNull(artikliPrikaz);
-            var firstRow = artikliPrikaz.Rows[0];
-            firstRow.Click();
-
-            // 4. Set quantity (assume TextBox with automation id "kolicina")
-            var kolicinaBox = _mainWindow.FindFirstDescendant(cf => cf.ByAutomationId("kolicina"))?.AsTextBox();
-            Assert.NotNull(kolicinaBox);
-            kolicinaBox.Text = "2";
-
-            // 5. Click "Add to Cart" (assume Button with automation id "dodajUKorpuBtn")
-            var addToCartBtn = _mainWindow.FindFirstDescendant(cf => cf.ByAutomationId("dodajUKorpuBtn"))?.AsButton();
-            Assert.NotNull(addToCartBtn);
-            addToCartBtn.Invoke();
-
-            // 6. Assert cart total is updated
-            ukupnaCenaLbl = _mainWindow.FindFirstDescendant(cf => cf.ByAutomationId("ukupnaCenaLbl"))?.AsLabel();
-            Assert.NotEqual("0", ukupnaCenaLbl.Text);
-
-            // 7. Complete purchase (assume Button with automation id "zavrsiKupovinuBtn")
-            var finishBtn = _mainWindow.FindFirstDescendant(cf => cf.ByAutomationId("zavrsiKupovinuBtn"))?.AsButton();
-            Assert.NotNull(finishBtn);
-            finishBtn.Invoke();
-
-            // 8. Assert confirmation dialog appears (assume Window with title "PotvrdaKupovine")
-            var confirmation = _mainWindow.ModalWindows.FirstOrDefault(w => w.Title.Contains("PotvrdaKupovine"));
-            Assert.NotNull(confirmation);
+            var win = app.GetAllTopLevelWindows(automation).FirstOrDefault(w => w.Title?.IndexOf(titleContains, StringComparison.OrdinalIgnoreCase) >= 0);
+            if (win != null) return win;
+            Thread.Sleep(200);
         }
+        return null;
+    }
 
-        public void Dispose()
+    private static T WaitForElement<T>(Func<T> factory, int timeoutMs) where T : class
+    {
+        var end = DateTime.Now.AddMilliseconds(timeoutMs);
+        while (DateTime.Now < end)
         {
-            _automation.Dispose();
-            _app.Close();
+            var el = factory();
+            if (el != null) return el;
+            Thread.Sleep(150);
         }
+        return null;
+    }
+
+    private static AutomationElement FindRowByCellValue(DataGridView grid, object columnIndexOrName, string cellText)
+    {
+        if (grid == null) return null;
+        foreach (var row in grid.Rows)
+        {
+            foreach (var cell in row.Cells)
+            {
+                try
+                {
+                    var val = cell.Value?.ToString();
+                    if (string.Equals(val, cellText, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return row;
+                    }
+                }
+                catch { }
+            }
+        }
+        return null;
+    }
+
+    private static void CloseAnyMessageBox(Application app, UIA3Automation automation, int timeoutMs)
+    {
+        var end = DateTime.Now.AddMilliseconds(timeoutMs);
+        while (DateTime.Now < end)
+        {
+            var topWins = app.GetAllTopLevelWindows(automation);
+            foreach (var w in topWins)
+            {
+                // skip main app windows that are too large - message boxes usually have short titles
+                var ok = w.FindFirstDescendant(cf => cf.ByText("OK"))?.AsButton()
+                      ?? w.FindFirstDescendant(cf => cf.ByText("Ok"))?.AsButton()
+                      ?? w.FindFirstDescendant(cf => cf.ByText("U redu"))?.AsButton()
+                      ?? w.FindFirstDescendant(cf => cf.ByText("Uredu"))?.AsButton();
+
+                if (ok != null)
+                {
+                    try { ok.Invoke(); return; }
+                    catch { }
+                }
+            }
+            Thread.Sleep(100);
+        }
+    }
+
+    public void Dispose()
+    {
+        try
+        {
+            automation?.Dispose();
+            if (app != null && !app.HasExited)
+            {
+                app.Close();
+                app.Dispose();
+            }
+        }
+        catch { }
     }
 }

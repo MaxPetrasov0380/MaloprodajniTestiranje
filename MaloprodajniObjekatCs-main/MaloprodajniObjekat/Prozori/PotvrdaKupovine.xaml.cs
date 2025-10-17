@@ -94,7 +94,7 @@ namespace MaloprodajniObjekat.Prozori
         {
             DateTime now = DateTime.Now;
             string content = "ID RAČUNA: " + getRacunID() + "\n" + "KASIR: " + kasirUsername + "\n" + "DATUM I VREME: " + now + "\n" + korpatxtfield.Text + "\n---------\n" + "UKUPNA CENA: " + korpaUkupnaCena + "RSD\n";
-            string path = "C:\\Users\\User\\source\\repos\\MaloprodajniObjekat\\MaloprodajniObjekat\\Racuni\\";
+            string path = "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Racuni\\";
             File.WriteAllText(path + getRacunID() + ".txt", content);
         }
 

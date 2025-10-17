@@ -31,6 +31,6 @@
         <TextBox x:Name="cenaStartTxt" FontFamily="Bahnschrift" Text="0" Foreground="White" Margin="102,209,796,261" FontSize="18" Visibility="Hidden"/>
         <Label FontFamily="Bahnschrift" Content="Ukupna cena:" Foreground="White" FontSize="16" Margin="675,73,79,378"/>
         <Label x:Name="ukupnaCenaLbl" FontFamily="Bahnschrift" Content="pricePlaceholder" Foreground="White" FontSize="16" Margin="784,73,22,364"/>
-        <Button Content="OSVEŽI LISTU" HorizontalAlignment="Left" Height="25" Margin="555,73,0,0" VerticalAlignment="Top" Width="106" FontFamily="Bahnschrift" FontSize="11" Click="osveziListu"/>
+        <Button x:Name="osveziBtn" Content="OSVEŽI LISTU" HorizontalAlignment="Left" Height="25" Margin="555,73,0,0" VerticalAlignment="Top" Width="106" FontFamily="Bahnschrift" FontSize="11" Click="osveziListu"/>
     </Grid>
 </Page>

@@ -64,7 +64,7 @@ namespace MaloprodajniObjekat.Prozori
         {
             try
             {
-                string path = "C:\\Users\\User\\source\\repos\\MaloprodajniObjekat\\MaloprodajniObjekat\\Racuni\\";
+                string path = "C:\\Users\\Korisnik\\Documents\\GitHub\\MaloprodajniTestiranje\\MaloprodajniObjekatCs-main\\MaloprodajniObjekat\\Racuni\\";
                 racunPrikaz.Text = File.ReadAllText(path + racunID + ".txt");
             }
             catch(FileNotFoundException){racunPrikaz.Text = "Datoteka nije pronađena.";}
