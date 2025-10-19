@@ -174,7 +174,7 @@ public class KasaE2E : IDisposable
         }
         return null;
     }
-
+    
     private static void CloseAnyMessageBox(Application app, UIA3Automation automation, int timeoutMs)
     {
         var end = DateTime.Now.AddMilliseconds(timeoutMs);

@@ -13,7 +13,6 @@ namespace InventarIntegrationTesting
             var repo = new ArtikliRepository(_testConnectionString);
             var servis = new ArtikliServis(repo);
 
-            var now = DateTime.Now;
             bool created = servis.create("XIXO Tutti Frutti","Bezalkoholno pice",60,100);
             Assert.True(created, "Neuspesno dodavanje testa");
 
